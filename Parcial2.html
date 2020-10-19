@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clase 1 </title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html"></script>
+</head>
+<body style="margin: 0px;overflow: hidden">
+    <a-scene>
+        <a-marker-camera preset="hiro" ></a-marker-camera>
+
+       <a-camera position="0 10 50" far="1000" ></a-camera> 
+        <a-sky src=#skyTexture></a-sky> 
+        <a-plane src="#texturaPlano" material="normalMap:#normales; normalesPlano:5 5" position ="0 -0 0" rotation="-90 0 0"  width="80" height="80" static-body ></a-plane>
+
+        <a-assets>
+            <img id= "skyTexture" src="textura/sky.jpg">
+            <img id="texturaPlano" src="textura/asfalto.jpg">
+            <img id="normalesPlano" src="textura/asfaltoNormals.jpg">
+            <img id="normales" src="textura/lodo.jpg">
+            <img id="texturaEsfera" src="textura/tierra.jpg">
+            <img id="normalEsfera" src="textura/normalesPiedra.jpg">
+            <img id="texturaCaja" src="textura/logotwichh.png">
+            <img id="normaArbol" src="textura/arbolN.jpg">
+            <img id="texturaArbol" src="textura/arbol.jpg">
+            <img id="trasnparente" src="textura/trasnparente.png">
+
+            <a-asset-item id="lampara" src="textura/puente/Bridge.obj">
+
+        </a-assets>
+
+        <a-entity obj-model="obj: #lampara" position="-15 0 15 " scale= "0.1, 0.1, 0.1" rotation="0 130 0"> </a-entity>
+
+        <a-light type="ambient" color="white" intensity="0.8" decay="1.5"></a-light>
+        <a-light type="point" color="blue" intensity="1" decay="2" position=" 8 1 0" distance="25" rotation="0 0 0"></a-light>
+        <a-light type="point" color="red" intensity="1" decay="2" position=" -8 1 0" distance="25" rotation="0 0 0"></a-light>
+
+        <a-sphere src=#texturaArbol material="normalMap:#normales; normaArbol:3 3" scale=" 2 2 2" rotation ="0 0 0" position=" 0 5 0" ></a-sphere>
+
+                     
+        dgfkdkgjhd;fgjkdlgjldjg;ldkjf;gd
+    </a-scene>
+</body>
+</html>
