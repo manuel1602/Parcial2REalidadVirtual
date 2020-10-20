@@ -16,22 +16,23 @@
 <body style="margin: 0px;overflow: hidden">
     <a-scene>
         <a-marker-camera preset="hiro" ></a-marker-camera>
+        <a-camera position="0 7 20"></a-camera> 
 
-       <a-camera position="0 10 50" far="1000" ></a-camera> 
         <a-sky src=#skyTexture></a-sky> 
         <a-plane src="#texturaPlano" material="normalMap:#normales; normalesPlano:5 5" position ="0 -0 0" rotation="-90 0 0"  width="80" height="80" static-body ></a-plane>
 
         <a-assets>
-            <img id= "skyTexture" src="textura/sky.jpg">
-            <img id="texturaPlano" src="textura/asfalto.jpg">
-            <img id="normalesPlano" src="textura/asfaltoNormals.jpg">
-            <img id="normales" src="textura/lodo.jpg">
-            <img id="texturaEsfera" src="textura/tierra.jpg">
-            <img id="normalEsfera" src="textura/normalesPiedra.jpg">
-            <img id="texturaCaja" src="textura/logotwichh.png">
-            <img id="normaArbol" src="textura/arbolN.jpg">
-            <img id="texturaArbol" src="textura/arbol.jpg">
-            <img id="trasnparente" src="textura/trasnparente.png">
+            <img id= "skyTexture" src="texturas/sky.jpg">
+            <img id="texturaPlano" src="texturas/asfalto.jpg">
+            <img id="normalesPlano" src="texturas/asfaltoNormals.jpg">
+            <img id="normales" src="texturas/lodo.jpg">
+            <img id="texturaEsfera" src="texturas/tierra.jpg">
+            <img id="normalEsfera" src="texturas/normalesPiedra.jpg">
+            <img id="texturaCaja" src="texturas/logotwichh.png">
+            <img id="normaArbol" src="texturas/arbolN.jpg">
+            <img id="texturaArbol" src="texturas/arbol.jpg">
+            <img id="texturaLuna" src="texturas/texturaLuna.jpg">
+            <img id="normalesLuna" src="texturas/normalMapLuna.jpg">
 
             <a-asset-item id="lampara" src="textura/puente/Bridge.obj">
 
@@ -43,10 +44,11 @@
         <a-light type="point" color="blue" intensity="1" decay="2" position=" 8 1 0" distance="25" rotation="0 0 0"></a-light>
         <a-light type="point" color="red" intensity="1" decay="2" position=" -8 1 0" distance="25" rotation="0 0 0"></a-light>
 
-        <a-sphere src=#texturaArbol material="normalMap:#normales; normaArbol:3 3" scale=" 2 2 2" rotation ="0 0 0" position=" 0 5 0" ></a-sphere>
+        <a-sphere src=#texturaLuna material="normalMap:#normalesLuna; normaArbol:3 3" scale=" 5 5 5" rotation ="0 0 0" position=" 0 5 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" ></a-sphere>
 
                      
-        dgfkdkgjhd;fgjkdlgjldjg;ldkjf;gd
+        
     </a-scene>
 </body>
 </html>
